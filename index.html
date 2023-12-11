@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Задание 5</title>
+  <link rel="stylesheet" href="css/styles31.css">
+</head>
+<body>
+    <div style="background-color: bisque; text-align: center;">  
+        <h1>Калькулятор стоимости заказа</h1>  
+       
+        <p style= "font-size: 20px">  
+            <label for="quantity">Количество товара:</label>  
+            <input type="number" id="quantity" min="0" onchange=calculateTotal()>  
+        </p>  
+       
+        <p style="font-size: 20px;">  
+            <label for="product">Выберите товар:</label>  
+            <input type="radio" id="product1" name="productType" value="10" onclick=calculateTotal()>Товар 1 - 10 рублей
+            <input type="radio" id="product2" name="productType" value="20" onclick=calculateTotal()>Товар 2 - 20 рублей
+            <input type="radio" id="product3" name="productType" value="30" onclick=calculateTotal()>Товар 3 - 30 рублей
+        </p>  
+
+        <p style="font-size: 20px;display:none;" id="optionsSection">  
+            <label for="optionsSelect">Выберите опцию:</label>  
+            <select id="optionsSelect" onchange=calculateTotal()>  
+
+                <option disabled selected>Выбор опции</option>
+
+                <option value="1">Доставка курьером (+200 рублей)</option>  
+                <option value="2">Самовывоз</option>  
+            </select>  
+        </p>  
+        
+        <p style="font-size: 20px;display:none;" id="propertySection">  
+            <label for="propertyCheckbox">Свойство товара</label>
+            <input type="checkbox" id="propertyCheckbox" name="propertyCheckbox" value="50" onclick=calculateTotal()>
+        </p>
+ 
+        <p id="totalCost"></p>  
+    </div>
+</body>
+
+<script src="javascript.js"></script>
+</html>
+
